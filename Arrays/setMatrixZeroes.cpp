@@ -22,4 +22,4 @@ void setZeroes(vector<vector<int>>& matrix) {
             if(col0==0) matrix[i][0]=0;
         }
         
-    }
+}
