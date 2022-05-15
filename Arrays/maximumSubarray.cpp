@@ -13,7 +13,7 @@ leetcode link - https://leetcode.com/problems/maximum-subarray/
     }
     
     // if we also want to print sub array
-
+    // Approach 1  
     void SubarrayWithMaxSum(vector<int>& nums)
     {
 
@@ -41,3 +41,15 @@ leetcode link - https://leetcode.com/problems/maximum-subarray/
             cout << nums[i] << " ";
 
     }
+  
+     //  Approach 2 
+
+     /*  
+         Use 3 vraibles startindex,endindex,and globalStartindex
+         
+         For each element in the array starting from index (say i) , update sum = nums[i] and startIndex = i if nums[i] > nums[i] + sum . Else only update sum = sum+nums[i].
+         
+         if sum > maxi  update maxi=sum and  globalStartindex to startindex , endindex = i .
+         
+         now iterate from globalStart to end index to print subarray .
+     */
