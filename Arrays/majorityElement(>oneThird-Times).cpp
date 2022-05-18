@@ -28,6 +28,7 @@ leetcode link - https://leetcode.com/problems/majority-element-ii/
             }
         }
       //check for both num1,num2 i.e whether to check their frequency is > N/3 .
+      // Its needed doing check because its not mentioned in question that we get elements guarenteed.
         count1=count2=0;
       
         for(int num:nums){
