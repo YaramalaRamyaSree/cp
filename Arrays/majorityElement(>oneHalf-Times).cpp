@@ -3,6 +3,7 @@ leetcode link - https://leetcode.com/problems/majority-element/
 */
 //moore voting algorithm
 
+    // T.C=O(N),S.C=O(1)
     int majorityElement(vector<int>& nums) {
         //m=majority element
         int count=0,m;
