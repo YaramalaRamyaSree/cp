@@ -2,6 +2,10 @@
 interviewbit link - https://www.interviewbit.com/problems/subarray-with-given-xor/
 */
 
+//T.C=O(N),S.C=O(N)
+//LOGIC: maintain prefix xorr's and check if xoorr^B is present in map or xorr==B accordingly increment count 
+//Map stores frequency of particular xorr value .
+
 int Solution::solve(vector<int> &A, int B) {
 
     unordered_map<int,int> hashMap;
