@@ -2,6 +2,8 @@
 gfg link - https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1#
 */
 
+   //The sooner the meeting finishes we will have maximum meetings taking place in room so we sort the meetings according to end timings 
+   //T.C=O(N)+O(NlogN)+O(N)=O(NlogN),S.c=O(N)
    struct meet{
         int start;
         int end;
