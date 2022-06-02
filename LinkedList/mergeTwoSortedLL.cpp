@@ -37,3 +37,35 @@ leetcode link - https://leetcode.com/problems/merge-two-sorted-lists/
           return l2;            
         }
       }
+      
+        //T.C=O(N+M) inplace same as first method but we move pointer without swap
+        struct Node* SortedMerge(struct Node* list1, struct Node* list2)
+         { 
+           struct Node* head;
+           if(list1->data<=list2->data) {
+            head=list1;
+            list1=list1->next;}
+           else{
+            head=list2;
+            list2=list2->next;}
+            struct Node* temp=head;
+
+            while(list1&&list2){
+                if(list1->data<=list2->data){
+                    temp->next=list1;
+                    list1=list1->next;
+                }
+                else{
+                    temp->next=list2;
+                    list2=list2->next;
+                }
+                temp=temp->next;
+            }
+            if(list1){
+                temp->next=list1;
+            }
+            else{
+                temp->next=list2;
+            }
+            return head;
+        }
