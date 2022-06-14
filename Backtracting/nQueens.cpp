@@ -2,7 +2,7 @@
 leetcode link - https://leetcode.com/problems/n-queens/
 */
 
-    //T.C=O(N!*N) T(n)=n+n*T(n-1)
+    //T.C=O(N!*N) T(n)=n^2+n*T(n-1)
     //S.C=O(n^2)
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<string>>ans;
