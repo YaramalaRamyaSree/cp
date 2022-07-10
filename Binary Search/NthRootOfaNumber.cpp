@@ -1,5 +1,5 @@
 /*
-code studio - https://takeuforward.org/data-structure/nth-root-of-a-number-using-binary-search/
+code studio - https://www.codingninjas.com/codestudio/problems/1062679?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website&leftPanelTab=0
 */
 
 //T.C=O(LOG (m*10^d) base 2)*N  m is number n is root d decimal point where we need answer 
