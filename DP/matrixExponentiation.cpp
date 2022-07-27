@@ -3,6 +3,7 @@ gfg link -  https://practice.geeksforgeeks.org/problems/matrix-exponentiation271
 */
 
    //T.C=O(logN) S.C=O(K) K IS CONSTANT .
+   //Climbing stairs problem :from 1 to n stairs where u have chance to step forward 1 or 2 === equivalent to fibonacii and its most optimised version is matrix exponentiation .
    typedef vector<vector<long long int>> matrix;
     int m=1e9+7;
     matrix matMul(matrix a,matrix b){
