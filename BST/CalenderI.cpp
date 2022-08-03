@@ -2,7 +2,19 @@
 leetcode link - https://leetcode.com/problems/my-calendar-i/
 */
 
-//uses set which indeed implemented with balanced bst 
+//uisng map T.C=O(nlogn) S.C=o(n) store end,start 
+    map<int,int>mpp;
+    MyCalendar() {
+    }
+      bool book(int start, int end) {
+            auto it=mpp.upper_bound(start);
+            if(it!=mpp.end() && it->second<end)
+                return 0;
+            mpp[end]=start;
+            return 1;
+      }
+
+//uses set which indeed implemented with balanced bst -stored start,end
 //T.C=O(nlogn) S.C=o(n)
 class MyCalendar {
 public:
