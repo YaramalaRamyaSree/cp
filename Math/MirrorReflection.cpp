@@ -34,3 +34,16 @@ leetcode link - https://leetcode.com/problems/mirror-reflection/
         return 1-ref%2+ext%2;
         */
     }
+
+    //Recursive solution 
+    int f(int p,int q,int dist,int topleft,int topright,int bottomleft,int bottomright){
+        if(dist==p) return topright;
+        if(q+dist>p)
+           return  f(p,q,dist+q-p,bottomright,bottomleft,topright,topleft);
+        else
+           return  f(p,q,dist+q,topright,topleft,bottomright,bottomleft);
+        
+    }
+    int mirrorReflection(int p, int q) {
+         return f(p,q,q,2,1,-1,0);
+    }
