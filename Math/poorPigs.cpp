@@ -8,7 +8,7 @@ leetcode link - https://leetcode.com/problems/poor-pigs/
         int pigs=0;
         /*
         //this will exceed time
-        while(pow(x,pigs)<buckets){
+        while(pow(x+1,pigs)<buckets){
             pigs++;
         }
         */
