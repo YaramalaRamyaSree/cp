@@ -1,7 +1,8 @@
 /*
 gfg link - https://practice.geeksforgeeks.org/problems/quicksort-on-doubly-linked-list/1
 */
-
+class solution{
+public:
     Node* partition(Node *l, Node *h){
       //key idea **** 1st ele is pivot , 2nd to ith ele<=first , from i+1 to jth ele > first  ,from j+th to last not proceessed . 
         int key=l->data;
@@ -24,6 +25,7 @@ gfg link - https://practice.geeksforgeeks.org/problems/quicksort-on-doubly-linke
       //hence l data is placed correctly in ith node data; 
         return i;
     }
+};
 
 void quickSort(struct Node* l, struct Node *h)
 {
