@@ -2,42 +2,29 @@
 leetcode link - https://leetcode.com/problems/substring-with-concatenation-of-all-words/
 */
 
-
+    //T.C=O(M*N) S.C=O(N)
     vector<int> findSubstring(string s, vector<string>& words) {
-        vector<int>ans;
         int n=words.size();
-        int m=words[0].size();
-        int total=n*m;
-        if(s.size()<total){
-            return ans;
+        int wordlen = words[0].length();
+        int total=n*wordlen;
+        vector<int>res;
+        if(s.size()<total)
+            return res;
+        unordered_map<string,int>m;
+        for(int i=0;i<n;i++){
+            m[words[i]]++;
         }
-        unordered_map<string,int>mpp;
-            
-            for(int j=0;j<words.size();j++){
-                mpp[words[j]]++;
-            }
         for(int i=0;i<=s.size()-total;i++){
-            unordered_map<string,int>mp;mp=mpp;
+            unordered_map<string,int>copy;
+            copy=m;
             int k;
             for(k=0;k<n;k++){
-                
-                string temp=s.substr(i+k*m,m);
-                if(mp.count(temp)==0){
-                    break;
-                }
-                else{
-                    if(mp[temp]!=0){
-                        mp[temp]--;
-                    }
-                    else{
-                        break;
-                    }
-                }
+                string str=s.substr(i+k*wordlen,wordlen);
+                if(!copy.count(str)) break;
+                if(copy[str]==1) copy.erase(str); 
+                else  copy[str]--;
             }
-            if(k==n){
-                ans.push_back(i);
-            }
-            
+            if(k==n) res.push_back(i);
         }
-        return ans ;
+        return res;
     }
