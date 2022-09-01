@@ -28,3 +28,29 @@ leetcode link - https://leetcode.com/problems/longest-substring-without-repeatin
         return maxi;
         
     }
+
+//with constant space
+
+    int longestUniqueSubsttr(string S){
+       int mpp[26];
+       memset(mpp,-1,sizeof(mpp));
+       int maxi=0,cnt=0;
+       for(int i=0;i<S.length();i++){
+           if(mpp[S[i]-'a']!=-1)
+           {
+               if(i-mpp[S[i]-'a']<=cnt)
+                    cnt=i-mpp[S[i]-'a'];
+               else
+                    cnt++;
+                mpp[S[i]-'a']=i;
+           }
+           else
+           {
+               cnt++;
+               mpp[S[i]-'a']=i;
+           }
+           
+           if(cnt>maxi) maxi=cnt;
+       }
+        return maxi;
+    }
