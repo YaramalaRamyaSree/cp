@@ -2,6 +2,8 @@
 gfg link - https://practice.geeksforgeeks.org/problems/kth-largest-element-in-a-stream2220/1
 */
 
+
+//T.C=O(NlogK) S.C=O(n)
     vector<int> kthLargest(int k, int arr[], int n) {
         vector<int>ans;
         priority_queue<int,vector<int>,greater<int>>q;
