@@ -14,6 +14,18 @@ class  nodeinfo{
             this->maxsize=maxsize;
         }
 };
+/*struct nodeinfo{
+        int minval;
+        int maxval;
+        int maxsize;
+        nodeinfo(int mi,int ma,int size){
+            minval=mi;
+            maxval=ma;
+            maxsize=size;
+        }
+}; 
+*/
+//u may use class or struct 
 class Solution{
     public:
 
