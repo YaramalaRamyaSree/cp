@@ -3,6 +3,7 @@ gfg link - https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tre
 */
 
 //T.C=O(N) S.C=O(N)
+    vector <int> bottomView(Node *root) {
         map<int,int>mpp;
         vector<int>ans;
         queue<pair<Node*,int>>q;
@@ -20,3 +21,4 @@ gfg link - https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tre
         for(auto it:mpp)
             ans.push_back(it.second);
         return ans;
+    }
